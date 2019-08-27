@@ -1,26 +1,9 @@
-# Snack-Attack
-A CS 345 Game Development Fundamentals Team Project
-Newly relicensed and rebranded!
-Same great crunch!
-
-## Congrats!
-Looks like you found the repo.Here are some things to do:
-1. Download Github Desktop or Sourcetree (or Git Bash if you're a REAL developer)
-2. Copy the Project Link and Clone it on your computer
-3. Pull!
-
-This readme is a copy/paste of the WorkLog. If details are our of place, consult Assets/Documentation/WorkLog.txt
-
-
-------------------------------------------------------------------------------------------------
-
-
 
 
 		WORK LOG
 
 *&T WORK LOG
-*&D 2019 08 27
+*&D 2019 08 02
 *&A PJM
 
 
@@ -30,7 +13,7 @@ This readme is a copy/paste of the WorkLog. If details are our of place, consult
 		CONTENTS
 
 *&T CONTENTS
-*&D 2019 08 02
+*&D 2019 08 20
 *&A PJM
 
 	General
@@ -502,7 +485,7 @@ Shooting
 		Part 4 is enemy effects, navigation, animation			DONE (Need Models, Health)
 		Part 5 is health ui										DONE
 		Part 6 is Health, Attacking								ERR (Cannot Drag Components)
-		Part 7 has Death, Despawning, Polish
+		Part 7 has Death, Despawning, Polish					ERR (Triggers????)
 		Part 8 has a scoring system
 		Part 9 is a spawner
 		Part 10 is a death system
@@ -608,6 +591,10 @@ Jesper Kyd's "Oof"
 
 Sheb Wooley's "Wilhelm Scream"
 	Sound from https://archive.org/
+	License: CC PD (https://creativecommons.org/licenses/publicdomain/)
+
+DKnight's "Pew Pew"
+	Sound from https://soundbible.com/
 	License: CC PD (https://creativecommons.org/licenses/publicdomain/)
 
 
