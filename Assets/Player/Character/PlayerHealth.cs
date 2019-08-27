@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
         public int CurrentHealth;                                       //During Play Health
         bool IsDead;                                                    //Control interrupting movement and shooting
         bool Damaged;                                                   //Control showing effects
+        bool Healed;                                                    //Control showing effects
 
         //UI
         public Slider HealthBar;                                        //Shows health to player
@@ -30,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
         public AudioClip DeathClip;                                     //Plays if player dies
         public float DamageFlashSpeed = 5f;
         public Color DamageFlashColor = new Color(1f, 0f, 0f, 0.1f);    //Faint Red
+        public Color HealthFlashColor = new Color(1f, 1f, 1f, 0.1f);    //Faint White
         Animator PlayerAnimator;                                        //Interrupt player on death
         PlayerMovement PlayerMover;                                     //Stutter movement on damage
         //PlayerShooting PlayerShooter;                                 //Interrupt shooting on damage
@@ -57,14 +59,21 @@ public class PlayerHealth : MonoBehaviour
             //Flash Red
             DamageImage.color = DamageFlashColor;
         }
+        //Player is healed
+        else if (Healed)
+        {
+            //Flash White
+            DamageImage.color = HealthFlashColor;
+        }
         //Player has not taken damage
         else
         {
             //Fade Out
             DamageImage.color = Color.Lerp(DamageImage.color, Color.clear, DamageFlashSpeed * Time.deltaTime);
         }
-        //Reset Flag
+        //Reset Flags
         Damaged = false;
+        Healed = false;
     }
 
 
@@ -82,6 +91,17 @@ public class PlayerHealth : MonoBehaviour
         {
             Die();
         }
+    }
+
+
+    //HEAL
+    //Simulate effects of healing
+    public void Heal(int HealSize)
+    {
+        Healed = true;                          //Set Flag
+        CurrentHealth += HealSize;              //Increment Health
+        HealthBar.value = CurrentHealth;        //Update UI
+        //PlayerSound.Play();                   //Laugh in Ectasy
     }
 
 

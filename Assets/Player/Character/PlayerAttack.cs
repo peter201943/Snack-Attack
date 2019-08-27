@@ -29,15 +29,19 @@ public class PlayerAttack : MonoBehaviour
         private float FireTimer;                    //Controls when to fire
     //Projectile
         public float ProjectileLifetime = 5f;       //Controls when to despawn projectiles
-        public GameObject AntiCracker;
-        public GameObject AntiChocolate;
-        public GameObject AntiMarshmellow;
+        public GameObject AntiCracker;              //AntiCracker Projectile
+        public GameObject AntiChocolate;            //AntiChocolate Projectile
+        public GameObject AntiMarshmellow;          //AntiMarshmellow Projectile
     //Effects
         public int Damage = 10;                     //Controls how much damage to do
         GameObject Monster;                         //What we hurt
         AudioSource PlayerSound;
         public AudioClip PainClip;                  //Plays if player hurts
         public AudioClip FireClip;                  //Plays if player fires
+    //Ammo
+        bool AntiCrackerMode = true;                //Controls whether gun can fire anticrackers
+        bool AntiChocolateMode = true;              //Controls whether gun can fire anticrackers
+        bool AntiMarshmellowMode = true;            //Controls whether gun can fire anticrackers
 
 
     //AWAKE
