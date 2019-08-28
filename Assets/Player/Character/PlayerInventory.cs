@@ -6,6 +6,7 @@
  * This script ONLY tracks numbers, it does not make decisions
  */
 
+
 //DECLARATIONS
 using System.Collections;
 using System.Collections.Generic;
@@ -103,7 +104,8 @@ public class PlayerInventory : MonoBehaviour
     //Removes some Chocolates from inventory
     public void DropChocolate(int Amount)
     {
-
+        CurrentChocolates -= Amount;                    //Drop Ammo
+        ChocolateBar.value = CurrentChocolates;         //Update UI
     }
 
 
@@ -111,7 +113,8 @@ public class PlayerInventory : MonoBehaviour
     //Removes some marshmellows from inventory
     public void DropMarshmellow(int Amount)
     {
-
+        CurrentMarshmellows -= Amount;                  //Drop Ammo
+        MarshmellowBar.value = CurrentMarshmellows;     //Update UI
     }
 
 
@@ -119,7 +122,8 @@ public class PlayerInventory : MonoBehaviour
     //Removes some crackers from inventory
     public void DropCracker(int Amount)
     {
-
+        CurrentCrackers -= Amount;                      //Drop Ammo
+        CrackerBar.value = CurrentCrackers;             //Update UI
     }
 }
 

@@ -15,6 +15,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;               //Added for UI Components
+using TMPro;                        //Added for Text Mesh Components
 
 
 //PLAYERATTACK
@@ -39,8 +40,9 @@ public class PlayerAttack : MonoBehaviour
         public GameObject AntiChocolate;                //AntiChocolate Projectile
         public GameObject AntiMarshmellow;              //AntiMarshmellow Projectile
     
-        //Target
+        //Target and Inventory
         GameObject Monster;                             //What we hurt
+        PlayerInventory PlayerAmmo;                     //Where we get ammo from
 
         //Audio
         AudioSource PlayerSound;
@@ -49,7 +51,7 @@ public class PlayerAttack : MonoBehaviour
         //public AudioClip JamClip;                     //Plays if empty ammo
 
         //UI
-        public TextMeshPro WeaponDisplay;                  //Shows weapon mode to player
+        public TextMeshProUGUI WeaponTypeDisplay;                  //Shows weapon mode to player
         public Image WeaponModeDisplay;                     //Shows image of weapon mode to player
     
         //Ammo
@@ -68,8 +70,8 @@ public class PlayerAttack : MonoBehaviour
         PlayerSound = GetComponent<AudioSource>();
         //Set Default Fire Display
         AntiMarshmellowDisplay = true;
-        //Get Weapon Display from TextMesh
-        WeaponDisplay = GetComponent<TMPro.TextMeshProUGUI>().text;
+        //Find Inventory
+        PlayerAmmo = GetComponent<PlayerInventory>();
     }
 
 
@@ -84,28 +86,46 @@ public class PlayerAttack : MonoBehaviour
         //AntiMarshmellow Fire
         if (Input.GetMouseButton(0) && (FireTimer <= 0f) && AntiMarshmellowMode)
         {
+            //ACTION
             AntiMarshmellowFire();
-            WeaponDisplay.text = "Choc+Crack";          //Update UI
+            //UI
+            WeaponTypeDisplay.text = "Choc+Crack";      //Update UI
+            //INVENTORY
+            PlayerAmmo.DropChocolate(1);                //Expend a Chocolate
+            PlayerAmmo.DropCracker(1);                  //Expend a Cracker
+            //AUDIO
             PlayerSound.clip = FireClip;                //Change Sound to Fire
-            PlayerSound.Play();
+            PlayerSound.Play();                         //Boom!
             PlayerSound.clip = PainClip;                //Change Sound to Pain
         }
         //AntiCracker Fire
         else if (Input.GetMouseButton(1) && (FireTimer <= 0f) && AntiCrackerMode)
         {
+            //ACTION
             AntiCrackerFire();
-            WeaponDisplay.text = "Marsh+Choc";          //Update UI
+            //UI
+            WeaponTypeDisplay.text = "Marsh+Choc";      //Update UI
+            //INVENTORY
+            PlayerAmmo.DropChocolate(1);                //Expend a Chocolate
+            PlayerAmmo.DropMarshmellow(1);              //Expend a Marshmellow
+            //AUDIO
             PlayerSound.clip = FireClip;                //Change Sound to Fire
-            PlayerSound.Play();
+            PlayerSound.Play();                         //Boom!
             PlayerSound.clip = PainClip;                //Change Sound to Pain
         }
         //AntiChocolate Fire
         else if (Input.GetMouseButton(2) && (FireTimer <= 0f) && AntiChocolateMode)
         {
+            //ACTION
             AntiChocolateFire();
-            WeaponDisplay.text = "Marsh+Crack";         //Update UI
+            //UI
+            WeaponTypeDisplay.text = "Marsh+Crack";     //Update UI
+            //INVENTORY
+            PlayerAmmo.DropMarshmellow(1);              //Expend a Marshmellow
+            PlayerAmmo.DropCracker(1);                  //Expend a Cracker
+            //AUDIO
             PlayerSound.clip = FireClip;                //Change Sound to Fire
-            PlayerSound.Play();
+            PlayerSound.Play();                         //Boom!
             PlayerSound.clip = PainClip;                //Change Sound to Pain
         }
 
