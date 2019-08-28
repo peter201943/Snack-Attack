@@ -98,6 +98,7 @@ public class AmmoPickup : MonoBehaviour
             {
                 PlayerLife.Heal(AmmoAmount);
             }
+
             //Remove the ammo pickup from play
             Destroy(gameObject);
         }

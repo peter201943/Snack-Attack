@@ -29,10 +29,33 @@ Please consider filling out one of our surveys!
 [TAKE THE SURVEY!](https://docs.google.com/forms/d/1wkS1KBoFhV1sY7Hj0Gsfn6b8Y555Tl-DqSisIQIq0i4/edit)
 
 
+## Installation
+ - Check the "Final" folder for a build of the game
+ - Download and run "Snack-Attack.exe" for Windows
+ - Linux and Mac: Coming Soon!
+
+
+## Contribution
+ - Download Unity Hub
+ - Install Unity Engine version 1.4
+ - Pull the entire Repository
+ - Open the project from Unity Hub
+ 
+
+## Art
+[Check out our assets!](https://drive.google.com/drive/folders/14iplNer65rDxIeMjC0zzCY9cW6_9cEi0?usp=sharing)
+[Check out our concepts!](https://drive.google.com/drive/folders/1iwppWL7fFXnPGWgth0ue4S4XMT8s51ae?usp=sharing)
+
+
+## License
+None. Please don't steal our stuff.
+
+
 ## Misc
 This readme is a copy/paste of the WorkLog. If details are our of place, consult Assets/Documentation/WorkLog.txt
 
-[Visit our GithubPage!](https://peter201943.github.io/Snack-Attack/)
+[Visit our Github Page!](https://peter201943.github.io/Snack-Attack/)
+[Visit our Github Repo!](https://github.com/peter201943/Snack-Attack)
 
 
 ------------------------------------------------------------------------------------------------
