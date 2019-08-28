@@ -1,14 +1,16 @@
 # Snack-Attack
+![image](https://drive.google.com/uc?export=view&id=<1fbyJY0SGviDN2HYMm29Z_7djszhKTxg4>)
 A CS 345 Game Development Fundamentals Team Project
 Newly relicensed and rebranded!
 Same great crunch!
 
-## Congrats!
-Looks like you found the repo.Here are some things to do:
-1. Download Github Desktop or Sourcetree (or Git Bash if you're a REAL developer)
-2. Copy the Project Link and Clone it on your computer
-3. Pull!
+## Overview
 
+
+## Feedback
+Please consider filling out one of our surveys!
+
+## Misc
 This readme is a copy/paste of the WorkLog. If details are our of place, consult Assets/Documentation/WorkLog.txt
 
 
