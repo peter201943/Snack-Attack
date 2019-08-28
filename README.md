@@ -1,5 +1,5 @@
 # Snack-Attack
-![image](https://drive.google.com/uc?export=view&id=<1fbyJY0SGviDN2HYMm29Z_7djszhKTxg4>)
+![image](https://drive.google.com/uc?export=view&id=1fbyJY0SGviDN2HYMm29Z_7djszhKTxg4)
 A CS 345 Game Development Fundamentals Team Project
 Newly relicensed and rebranded!
 Same great crunch!
