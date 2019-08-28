@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
         //UI
         public Slider HealthBar;                                        //Shows health to player
         public Image DamageImage;                                       //Flashed if player takes damage
+        public Transform GameOver;                                      //Game Over popup on death
 
         //Effects
         AudioSource PlayerSound;
@@ -116,6 +117,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerAnimator.SetTrigger("Die");       //Animate Death
         PlayerSound.clip = DeathClip;           //Change Sound to Scream
         PlayerSound.Play();                     //Scream to Death
+        GameOver.gameObject.SetActive(true);    //Pop up GameOver Screen
     }
 
 
