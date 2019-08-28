@@ -24,37 +24,31 @@ public class PlayerInventory : MonoBehaviour
         private GameObject Player;
 
         //Weapon Items
-        private int Marshmellows;                   //Controls whether gun can fire antichocs and anticracks
-        private int Chocolates;                     //Controls whether gun can fire antimarshs and anticracks
-        private int Crackers;                       //Controls whether gun can fire antichocs and antimarshs
+        private int CurrentMarshmellows;                //Controls whether gun can fire antichocs and anticracks
+        private int CurrentChocolates;                  //Controls whether gun can fire antimarshs and anticracks
+        private int CurrentCrackers;                    //Controls whether gun can fire antichocs and antimarshs
 
         //Default Values
-        public int StartingMarshmellows = 50;       //How many Marshmellows the player starts with
-        public int StartingChocolates = 50;         //How many Chocolates the player starts with
-        public int StartingCrackers = 50;           //How many Crackers the player starts with
+        public int StartingMarshmellows = 50;           //How many Marshmellows the player starts with
+        public int StartingChocolates = 50;             //How many Chocolates the player starts with
+        public int StartingCrackers = 50;               //How many Crackers the player starts with
 
         //Logic
-        float PickupRange = 5f;                     //How far away a player can be from an item to pick it up
+        float PickupRange = 5f;                         //How far away a player can be from an item to pick it up
 
         //Effects
-        public Slider MarshmellowBar;               //Shows Marshmellows to player
-        public Slider CrackerBar;                   //Shows Crackers to player
-        public Slider ChocolateBar;                 //Shows Chocolates to player
+        public Slider MarshmellowBar;                   //Shows Marshmellows to player
+        public Slider CrackerBar;                       //Shows Crackers to player
+        public Slider ChocolateBar;                     //Shows Chocolates to player
 
 
     //AWAKE
-    //Assign player and base values
+    //Assign base values
     void Awake()
     {
-        Marshmellows = StartingMarshmellows;
-    }
-
-
-    //UPDATE
-    //Checks if any valid items in range
-    void Update()
-    {
-        
+        CurrentMarshmellows = StartingMarshmellows;     //Set Ammo to Setup
+        CurrentChocolates = StartingChocolates;         //Set Ammo to Setup
+        CurrentCrackers = StartingCrackers;             //Set Ammo to Setup
     }
 
 
@@ -68,7 +62,8 @@ public class PlayerInventory : MonoBehaviour
     //Adds some Chocolates to inventory
     public void PickupChocolate(int Amount)
     {
-
+        CurrentChocolates += Amount;                    //Add Ammo
+        ChocolateBar.value = CurrentChocolates;         //Update UI
     }
 
 
@@ -76,7 +71,8 @@ public class PlayerInventory : MonoBehaviour
     //Adds some marshmellows to inventory
     public void PickupMarshmellow(int Amount)
     {
-
+        CurrentMarshmellows += Amount;                  //Add Ammo
+        MarshmellowBar.value = CurrentMarshmellows;     //Update UI
     }
 
 
@@ -84,7 +80,8 @@ public class PlayerInventory : MonoBehaviour
     //Adds some crackers to inventory
     public void PickupCracker(int Amount)
     {
-
+        CurrentCrackers += Amount;                      //Add Ammo
+        CrackerBar.value = CurrentCrackers;             //Update UI
     }
 
 
@@ -92,7 +89,8 @@ public class PlayerInventory : MonoBehaviour
     //Adds some health to Character
     public void PickupHealth(int Amount)
     {
-
+        CurrentChocolates += Amount;                    //Add Ammo
+        ChocolateBar.value = CurrentChocolates;         //Update UI
     }
 
 

@@ -14,7 +14,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.UI;               //Added for UI Components
+using UnityEngine.UI;               //Added for UI Components
 
 
 //PLAYERATTACK
@@ -25,29 +25,37 @@ public class PlayerAttack : MonoBehaviour
     //VARIABLES
 
         //Gun
-        public float FireTime = 0.33f;              //How fast the gun fires
-        public Transform GunBarrel;                 //Where the projectiles come from
-        public float FireForce = 1000f;               //How hard to throw projectiles
-        private float FireTimer;                    //Controls when to fire
-    
+        public float FireTime = 0.33f;                  //How fast the gun fires
+        public Transform GunBarrel;                     //Where the projectiles come from
+        public float FireForce = 1000f;                 //How hard to throw projectiles
+        private float FireTimer;                        //Controls when to fire
+        private bool AntiMarshmellowDisplay = false;    //Controls UI Image
+        private bool AntiChocolateDisplay = false;      //Controls UI Image
+        private bool AntiCrackerDisplay = false;        //Controls UI Image
+
         //Projectile
-        public float ProjectileLifetime = 5f;       //Controls when to despawn projectiles
-        public GameObject AntiCracker;              //AntiCracker Projectile
-        public GameObject AntiChocolate;            //AntiChocolate Projectile
-        public GameObject AntiMarshmellow;          //AntiMarshmellow Projectile
+        public float ProjectileLifetime = 5f;           //Controls when to despawn projectiles
+        public GameObject AntiCracker;                  //AntiCracker Projectile
+        public GameObject AntiChocolate;                //AntiChocolate Projectile
+        public GameObject AntiMarshmellow;              //AntiMarshmellow Projectile
     
-        //Effects
-        public int Damage = 10;                     //Controls how much damage to do
-        GameObject Monster;                         //What we hurt
+        //Target
+        GameObject Monster;                             //What we hurt
+
+        //Audio
         AudioSource PlayerSound;
-        public AudioClip PainClip;                  //Plays if player hurts
-        public AudioClip FireClip;                  //Plays if player fires
-        //public AudioClip JamClip;                   //Plays if empty ammo
+        public AudioClip PainClip;                      //Plays if player hurts
+        public AudioClip FireClip;                      //Plays if player fires
+        //public AudioClip JamClip;                     //Plays if empty ammo
+
+        //UI
+        public TextMeshPro WeaponDisplay;                  //Shows weapon mode to player
+        public Image WeaponModeDisplay;                     //Shows image of weapon mode to player
     
         //Ammo
-        bool AntiCrackerMode = true;                //Controls whether gun can fire anticrackers
-        bool AntiChocolateMode = true;              //Controls whether gun can fire anticrackers
-        bool AntiMarshmellowMode = true;            //Controls whether gun can fire anticrackers
+        bool AntiCrackerMode = true;                    //Controls whether gun can fire anticrackers
+        bool AntiChocolateMode = true;                  //Controls whether gun can fire anticrackers
+        bool AntiMarshmellowMode = true;                //Controls whether gun can fire anticrackers
 
 
     //AWAKE
@@ -58,11 +66,15 @@ public class PlayerAttack : MonoBehaviour
         FireTimer = 0f;
         //Set Sound Source
         PlayerSound = GetComponent<AudioSource>();
+        //Set Default Fire Display
+        AntiMarshmellowDisplay = true;
+        //Get Weapon Display from TextMesh
+        WeaponDisplay = GetComponent<TMPro.TextMeshProUGUI>().text;
     }
 
 
     //UPDATE
-    //Decides if player can fire
+    //Decides if player can fire and updates UI
     void Update()
     {
         //Decrement Timer as time passes
@@ -73,27 +85,30 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButton(0) && (FireTimer <= 0f) && AntiMarshmellowMode)
         {
             AntiMarshmellowFire();
-            PlayerSound.clip = FireClip;           //Change Sound to Fire
+            WeaponDisplay.text = "Choc+Crack";          //Update UI
+            PlayerSound.clip = FireClip;                //Change Sound to Fire
             PlayerSound.Play();
-            PlayerSound.clip = PainClip;           //Change Sound to Pain
+            PlayerSound.clip = PainClip;                //Change Sound to Pain
         }
         //AntiCracker Fire
         else if (Input.GetMouseButton(1) && (FireTimer <= 0f) && AntiCrackerMode)
         {
             AntiCrackerFire();
-            PlayerSound.clip = FireClip;           //Change Sound to Fire
+            WeaponDisplay.text = "Marsh+Choc";          //Update UI
+            PlayerSound.clip = FireClip;                //Change Sound to Fire
             PlayerSound.Play();
-            PlayerSound.clip = PainClip;           //Change Sound to Pain
+            PlayerSound.clip = PainClip;                //Change Sound to Pain
         }
         //AntiChocolate Fire
         else if (Input.GetMouseButton(2) && (FireTimer <= 0f) && AntiChocolateMode)
         {
             AntiChocolateFire();
-            PlayerSound.clip = FireClip;           //Change Sound to Fire
+            WeaponDisplay.text = "Marsh+Crack";         //Update UI
+            PlayerSound.clip = FireClip;                //Change Sound to Fire
             PlayerSound.Play();
-            PlayerSound.clip = PainClip;           //Change Sound to Pain
+            PlayerSound.clip = PainClip;                //Change Sound to Pain
         }
-        
+
     }
 
 
