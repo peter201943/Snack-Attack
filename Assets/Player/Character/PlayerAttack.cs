@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
         //Gun
         public float FireTime = 0.33f;                  //How fast the gun fires
         public Transform GunBarrel;                     //Where the projectiles come from
-        public float FireForce = 1000f;                 //How hard to throw projectiles
+        public float FireForce = 1500f;                 //How hard to throw projectiles
         private float FireTimer;                        //Controls when to fire
         private bool AntiMarshmellowDisplay = false;    //Controls UI Image
         private bool AntiChocolateDisplay = false;      //Controls UI Image

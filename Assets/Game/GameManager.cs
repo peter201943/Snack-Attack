@@ -1,37 +1,40 @@
-﻿using System.Collections;
+﻿
+
+//DECLARATIONS
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;               //Added for UI Components
 
+
+//GAMEMANAGER
+//Overglorified popup box
 public class GameManager : MonoBehaviour
 {
 
     //VARIABLES
-    int Score;
-    int ScoreStart = 0;
-    float Timer;
-    public Image DamageImage;
-    public Color DamageFlashColor;
-    public GameObject Player;
-    PlayerHealth PlayerLife;
+    private int MonstersRemaining;              //Controls game win
+    private GameObject[] Monsters;              //Tracks remaining monsters
+    public float Wait = 5f;                     //Controls when to start scoring
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Timer = 0f;
-        PlayerLife = Player.GetComponent<PlayerHealth>();
-    }
 
-    // Update is called once per frame
+    //UPDATE
+    //Has player won yet?
     void Update()
     {
-        Timer += Time.deltaTime;
-        if (Timer >= 30f)
+        //Decrement Wait Period
+        Wait -= Time.deltaTime;
+        //Find Monsters
+        GameObject[] Monsters = GameObject.FindGameObjectsWithTag("Monster");
+        //Count Monsters
+        MonstersRemaining = Monsters.Length;
+        //Is it over yet?
+        //Yes
+        if ((MonstersRemaining <= 5) && (Wait <= 0f))
         {
-            Debug.Log("You Win!");
-            //Flash Green
-            DamageImage.color = DamageFlashColor;
-            PlayerLife.Damage(1000);
+            Debug.Log("You Win");
+            GUI.Label(new Rect(0, 0, 200, 20), "YOU WIN");
         }
     }
 }
+

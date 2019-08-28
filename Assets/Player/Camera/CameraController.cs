@@ -27,8 +27,8 @@ public class CameraController : MonoBehaviour
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        NextPosition = StartPosition;
-        Move();
+        //NextPosition = StartPosition;
+        //Move();
     }
 
 
@@ -37,7 +37,8 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         //Scan for triggers
-        CheckTriggers();
+        //CheckTriggers();
+        transform.position = new Vector3(Player.transform.position.x, 30, Player.transform.position.z - 20);   //change 10 with desired distance from player
     }
 
 
