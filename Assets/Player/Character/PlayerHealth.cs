@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
         //Effects
         AudioSource PlayerSound;
         public AudioClip DeathClip;                                     //Plays if player dies
-        public float DamageFlashSpeed = 5f;
+        public float DamageFlashSpeed = 5f;                             //How long to feint colors
         public Color DamageFlashColor = new Color(1f, 0f, 0f, 0.1f);    //Faint Red
         public Color HealthFlashColor = new Color(1f, 1f, 1f, 0.1f);    //Faint White
         Animator PlayerAnimator;                                        //Interrupt player on death

@@ -14,6 +14,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.UI;               //Added for UI Components
 
 
 //PLAYERATTACK
@@ -41,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
         AudioSource PlayerSound;
         public AudioClip PainClip;                  //Plays if player hurts
         public AudioClip FireClip;                  //Plays if player fires
-        public AudioClip JamClip;                   //Plays if empty ammo
+        //public AudioClip JamClip;                   //Plays if empty ammo
     
         //Ammo
         bool AntiCrackerMode = true;                //Controls whether gun can fire anticrackers
@@ -68,21 +69,24 @@ public class PlayerAttack : MonoBehaviour
         FireTimer -= Time.deltaTime;
 
         //Check if player can and wants to fire which mode
-        if (Input.GetMouseButton(0) && (FireTimer <= 0f))
+        //AntiMarshmellow Fire
+        if (Input.GetMouseButton(0) && (FireTimer <= 0f) && AntiMarshmellowMode)
         {
             AntiMarshmellowFire();
             PlayerSound.clip = FireClip;           //Change Sound to Fire
             PlayerSound.Play();
             PlayerSound.clip = PainClip;           //Change Sound to Pain
         }
-        else if (Input.GetMouseButton(1) && (FireTimer <= 0f))
+        //AntiCracker Fire
+        else if (Input.GetMouseButton(1) && (FireTimer <= 0f) && AntiCrackerMode)
         {
             AntiCrackerFire();
             PlayerSound.clip = FireClip;           //Change Sound to Fire
             PlayerSound.Play();
             PlayerSound.clip = PainClip;           //Change Sound to Pain
         }
-        else if (Input.GetMouseButton(2) && (FireTimer <= 0f))
+        //AntiChocolate Fire
+        else if (Input.GetMouseButton(2) && (FireTimer <= 0f) && AntiChocolateMode)
         {
             AntiChocolateFire();
             PlayerSound.clip = FireClip;           //Change Sound to Fire
