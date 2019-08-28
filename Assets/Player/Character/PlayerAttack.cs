@@ -22,23 +22,28 @@ public class PlayerAttack : MonoBehaviour
 {
 
     //VARIABLES
-    //Gun
+
+        //Gun
         public float FireTime = 0.33f;              //How fast the gun fires
         public Transform GunBarrel;                 //Where the projectiles come from
         public float FireForce = 1000f;               //How hard to throw projectiles
         private float FireTimer;                    //Controls when to fire
-    //Projectile
+    
+        //Projectile
         public float ProjectileLifetime = 5f;       //Controls when to despawn projectiles
         public GameObject AntiCracker;              //AntiCracker Projectile
         public GameObject AntiChocolate;            //AntiChocolate Projectile
         public GameObject AntiMarshmellow;          //AntiMarshmellow Projectile
-    //Effects
+    
+        //Effects
         public int Damage = 10;                     //Controls how much damage to do
         GameObject Monster;                         //What we hurt
         AudioSource PlayerSound;
         public AudioClip PainClip;                  //Plays if player hurts
         public AudioClip FireClip;                  //Plays if player fires
-    //Ammo
+        public AudioClip JamClip;                   //Plays if empty ammo
+    
+        //Ammo
         bool AntiCrackerMode = true;                //Controls whether gun can fire anticrackers
         bool AntiChocolateMode = true;              //Controls whether gun can fire anticrackers
         bool AntiMarshmellowMode = true;            //Controls whether gun can fire anticrackers
@@ -84,8 +89,6 @@ public class PlayerAttack : MonoBehaviour
             PlayerSound.Play();
             PlayerSound.clip = PainClip;           //Change Sound to Pain
         }
-
-        //Check if projectile hit a monster
         
     }
 

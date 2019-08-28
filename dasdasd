@@ -1,0 +1,65 @@
+* [33mcommit e60433cb49a5a1fd696a3011eff6b82ea1b39114[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+[31m|[m Author: Peter Mangelsdorf <pjm349@drexel.edu>
+[31m|[m Date:   Wed Aug 28 10:20:55 2019 -0400
+[31m|[m 
+[31m|[m     blatant readme is blatantly blatant
+[31m|[m 
+* [33mcommit b4e232ccea7bdab4c7b10f4406191c8362f94032[m
+[31m|[m Author: Peter Mangelsdorf <pjm349@drexel.edu>
+[31m|[m Date:   Wed Aug 28 10:18:59 2019 -0400
+[31m|[m 
+[31m|[m     blatant readme is blatant
+[31m|[m 
+* [33mcommit 00e832f61da0a6ac4036cfd01b56bc06bb0d1258[m
+[31m|[m Author: Peter Mangelsdorf <pjm349@drexel.edu>
+[31m|[m Date:   Wed Aug 28 10:17:55 2019 -0400
+[31m|[m 
+[31m|[m     is this working?
+[31m|[m 
+* [33mcommit 9ccbe396277b3e422154b93a4d07f7f42bbb0669[m
+[31m|[m Author: akt54 <akt54@drexel.edu>
+[31m|[m Date:   Wed Aug 28 09:52:08 2019 -0400
+[31m|[m 
+[31m|[m     Created separate rooms in Scene 1
+[31m|[m 
+* [33mcommit 5be726fc9e1c834488e2b2979fbfe93cade6790c[m
+[31m|[m Author: akt54 <akt54@drexel.edu>
+[31m|[m Date:   Wed Aug 28 09:14:38 2019 -0400
+[31m|[m 
+[31m|[m     Created a Gameover menu on death
+[31m|[m 
+* [33mcommit d3f24d3359fd55b28aceef7b13785088cd275b45[m
+[31m|[m Author: Peter Mangelsdorf <pjm349@drexel.edu>
+[31m|[m Date:   Tue Aug 27 13:57:29 2019 -0400
+[31m|[m 
+[31m|[m     Minor health and weapon changes, still need to implement ammo ui
+[31m|[m 
+* [33mcommit 7f4079b02f2eed62663193e7051c4f70f8d106e8[m
+[31m|[m Author: Peter J. Mangelsdorf <38535612+peter201943@users.noreply.github.com>
+[31m|[m Date:   Tue Aug 27 11:16:01 2019 -0400
+[31m|[m 
+[31m|[m     Set theme jekyll-theme-leap-day
+[31m|[m 
+* [33mcommit 0d7f2910d3110fd35b930b0e7490c8941c980fc9[m
+[31m|[m Author: Peter Mangelsdorf <pjm349@drexel.edu>
+[31m|[m Date:   Tue Aug 27 11:00:02 2019 -0400
+[31m|[m 
+[31m|[m     Ok, replanting the tree, restarting the countdown, buckle up or sit down.
+[31m|[m 
+* [33mcommit 74eeb2d19a125aa514b57fbf48a1b86263a90785[m
+[31m|[m Author: Peter Mangelsdorf <pjm349@drexel.edu>
+[31m|[m Date:   Tue Aug 27 10:54:20 2019 -0400
+[31m|[m 
+[31m|[m     I should stop...
+[31m|[m 
+* [33mcommit 460f71d8273dcbc7816f332fe71866eb41f4b370[m
+[31m|[m Author: Peter Mangelsdorf <pjm349@drexel.edu>
+[31m|[m Date:   Tue Aug 27 10:52:50 2019 -0400
+[31m|[m 
+[31m|[m     fix quix to readzmez
+[31m|[m 
+* [33mcommit ee48ff061028191c710fe663eb078f1896cd35ef[m
+  Author: Peter Mangelsdorf <pjm349@drexel.edu>
+  Date:   Tue Aug 27 10:49:51 2019 -0400
+  
+      Test Commit. Please Standby.
