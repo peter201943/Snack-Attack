@@ -56,19 +56,19 @@ This readme is a copy/paste of the WorkLog. If details are our of place, consult
 
 	General
 	*&CT CONTENTS					//Names of Notes
-	*&CT HELLO					//Greetings
+	*&CT HELLO						//Greetings
 	*&CT REMINDERS					//Do this before running
 	*&CT PROGRESS					//Deliverable Breakdown and Status
 	
 	Game Design
-	*&CT GAME DESIGN				//Game design doc
+	*&CT GAME DESIGN					//Game design doc
 	*&CT GAME CONTENT				//Hierarchically lists deliverables
 	*&CT GAME FILES					//Name and Purpose
 	*&CT TUTORIALS					//Helpful documents
 	
 	Legal
 	*&CT MEMBERS					//Roles, Names, and Contacts
-	*&CT CREDITS					//Anyone's property we use
+	*&CT CREDITS						//Anyone's property we use
 
 
 ------------------------------------------------------------------------------------------------
