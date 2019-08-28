@@ -37,7 +37,7 @@ This readme is a copy/paste of the WorkLog. If details are our of place, consult
 
 	General
 	*&CT CONTENTS					//Names of Notes
-	*&CT HELLO						//Greetings
+	*&CT HELLO					//Greetings
 	*&CT REMINDERS					//Do this before running
 	*&CT PROGRESS					//Deliverable Breakdown and Status
 	
@@ -50,11 +50,6 @@ This readme is a copy/paste of the WorkLog. If details are our of place, consult
 	Legal
 	*&CT MEMBERS					//Roles, Names, and Contacts
 	*&CT CREDITS					//Anyone's property we use
-	
-	Note Design
-	*&CT METAFORMAT					//Description of Layout
-	*&CT FORMAT						//Layout of Notes
-	*&CT ABOUT						//Who am I
 
 
 ------------------------------------------------------------------------------------------------
@@ -163,21 +158,21 @@ Content									//WIP
 
 	Items								//WIP
 
-		Marshmellow Ammo				//
+		Marshmellow Ammo					//
 			Model						//PH
 			Animation					//
 			Texture						//
 			Script						//
 			Polish						//
 
-		Chocolate Ammo					//
+		Chocolate Ammo						//
 			Model						//PH
 			Animation					//
 			Texture						//
 			Script						//
 			Polish						//
 
-		Cracker Ammo					//
+		Cracker Ammo						//
 			Model						//PH
 			Animation					//
 			Texture						//
@@ -202,8 +197,8 @@ Content									//WIP
 	Interaction							//WIP
 
 		Movement						//WIP
-			Player Script				//DONE
-			Monster Script				//WIP
+			Player Script					//DONE
+			Monster Script					//WIP
 			Polish						//
 		
 		Looking							//WIP
@@ -212,7 +207,7 @@ Content									//WIP
 
 		Aiming							//
 			Script						//
-			HUD							//
+			HUD						//
 			Polish						//
 		
 		Projectile						//
@@ -268,7 +263,7 @@ Content									//WIP
 		Scenes							//
 			Start						//
 			Transition					//
-			End							//
+			End						//
 	
 	
 	Time								//WIP
