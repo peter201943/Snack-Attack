@@ -26,7 +26,7 @@ Summer Term 2019
 ## Feedback
 Please consider filling out one of our surveys!
 
-[TAKE THE SURVEY!](https://docs.google.com/forms/d/1wkS1KBoFhV1sY7Hj0Gsfn6b8Y555Tl-DqSisIQIq0i4/edit)
+[TAKE THE SURVEY!](https://docs.google.com/forms/d/e/1FAIpQLSem0Jn2_z12_VIanv_SV_CeuR8uJcSfxM16dES2BMZN_oB1Iw/viewform?usp=sf_link)
 
 
 ## Installation
