@@ -20,8 +20,12 @@ public class MonsterSpawn : MonoBehaviour
 
         //Logic
         private float SpawnTimer;
-        public float SpawnTime = 1f;
+        public float SpawnTime = 0.1f;
         private bool CanSpawn = false;
+        private float WaveTimer;
+        public float WaveTime = 3f;
+        private int SpawnTimes = 0;
+        public int SpawnMax = 2;
 
         //Spawn Placement
         public Transform[] SpawnLocations;
@@ -34,6 +38,7 @@ public class MonsterSpawn : MonoBehaviour
     void Awake()
     {
         SpawnTimer = 2f;
+        SpawnTimes = 0;
     }
 
 
@@ -58,8 +63,24 @@ public class MonsterSpawn : MonoBehaviour
     //Checks if we can spawn yet
     void Update()
     {
-        //Decrement Timer
+        //Decrement Timers
         SpawnTimer -= Time.deltaTime;
+        WaveTimer -= Time.deltaTime;
+
+        //Start Spawning
+        if ((WaveTimer <= 0f)||(SpawnTimes < SpawnMax))
+        {
+            CanSpawn = true;
+            SpawnTimes += 1;
+        }
+        //Stop Spawning
+        else
+        {
+            CanSpawn = false;
+            SpawnTimes = 0;
+            WaveTimer = WaveTime;
+        }
+
         //Can we spawn?
         //Yes
         if ((SpawnTimer <= 0f) && CanSpawn)

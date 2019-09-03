@@ -661,6 +661,14 @@ Sheb Wooley's "Wilhelm Scream"
 	Sound from https://archive.org/
 	License: CC PD (https://creativecommons.org/licenses/publicdomain/)
 
+Jonne Valtonen's "Hullu"
+	Sound from https://modarchive.org/
+	License: ???
+
+Pwee28's "I can't believe you've done this."
+	Sound from https://www.youtube.com/
+	License: ???
+
 
 ------------------------------------------------------------------------------------------------
 

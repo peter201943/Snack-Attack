@@ -26,6 +26,7 @@ public class MonsterHealth : MonoBehaviour
         Animator MonsterAnimator;
         AudioSource MonsterAudio;
         Collider MonsterCollider;
+        public GameObject SmoreMonster;
 
 
     //AWAKE
@@ -84,6 +85,7 @@ public class MonsterHealth : MonoBehaviour
         MonsterAudio.clip = DeathClip;              //Set Sound to Death Scream
         MonsterAudio.Play();                        //Scream to death
         Debug.Log("Augh!");
+        Instantiate(SmoreMonster, transform.position, Quaternion.identity);
         StartDespawn();
     }
 
