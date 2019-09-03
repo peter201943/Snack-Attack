@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9175b2df0134fc440bd3586f1d3347eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnTime: 2
 --- !u!54 &1136702914674201550
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -263,6 +264,8 @@ MonoBehaviour:
   Points: 10
   DeathClip: {fileID: 8300000, guid: c21e2f2106c769f4b89d738180179d3a, type: 3}
   FallSpeed: 1
+  SmoreMonster: {fileID: 2097918626517045689, guid: 4f1d5a8ea53451a4cbbf2d559c3ec6de,
+    type: 3}
 --- !u!1001 &4323640152147196185
 PrefabInstance:
   m_ObjectHideFlags: 0
