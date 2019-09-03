@@ -82,10 +82,13 @@ public class PlayerHealth : MonoBehaviour
     //Check if player dies and effects
     public void Damage(int DamageSize)
     {
-        Damaged = true;                         //Set Flag
+        if (DamageSize > 1)
+        {
+            PlayerSound.Play();                     //Cry in Pain
+            Damaged = true;                         //Set Flag
+        }
         CurrentHealth -= DamageSize;            //Deduct Health
         HealthBar.value = CurrentHealth;        //Update UI
-        PlayerSound.Play();                     //Cry in Pain
         
         //Player is Dead
         if (CurrentHealth <= 0 && !IsDead)
