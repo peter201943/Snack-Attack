@@ -30,9 +30,9 @@ Please consider filling out one of our surveys!
 
 
 ## Installation
- - Check the "Final" folder for a build of the game
+ - Check the Releases tab for the latest build of the game
  - Download and run "Snack-Attack.exe" for Windows
- - Linux and Mac: Coming Soon!
+ - Linux and Mac are now supported!
 
 
 ## Contribution
