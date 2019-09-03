@@ -51,8 +51,8 @@ public class PlayerAttack : MonoBehaviour
         //public AudioClip JamClip;                     //Plays if empty ammo
 
         //UI
-        public TextMeshProUGUI WeaponTypeDisplay;                  //Shows weapon mode to player
-        public Image WeaponModeDisplay;                     //Shows image of weapon mode to player
+        public TextMeshProUGUI WeaponTypeDisplay;       //Shows weapon mode to player
+        public Image WeaponModeDisplay;                 //Shows image of weapon mode to player
     
         //Ammo
         bool AntiCrackerMode = true;                    //Controls whether gun can fire anticrackers

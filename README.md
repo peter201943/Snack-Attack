@@ -44,6 +44,7 @@ Please consider filling out one of our surveys!
 
 ## Art
 [Check out our assets!](https://drive.google.com/drive/folders/14iplNer65rDxIeMjC0zzCY9cW6_9cEi0?usp=sharing)
+
 [Check out our concepts!](https://drive.google.com/drive/folders/1iwppWL7fFXnPGWgth0ue4S4XMT8s51ae?usp=sharing)
 
 
@@ -55,7 +56,16 @@ None. Please don't steal our stuff.
 This readme is a copy/paste of the WorkLog. If details are our of place, consult Assets/Documentation/WorkLog.txt
 
 [Visit our Github Page!](https://peter201943.github.io/Snack-Attack/)
+
 [Visit our Github Repo!](https://github.com/peter201943/Snack-Attack)
+
+
+## Results
+How do people like our game?
+
+How many features were implemented?
+
+What lessons were learned?
 
 
 ------------------------------------------------------------------------------------------------

@@ -1,16 +1,28 @@
-﻿using System.Collections;
+﻿
+
+//DECLARATIONS
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//PAUSEGAME
+//In Game Pause Menu
 public class PauseGame : MonoBehaviour
 {
+
+    //VARIABLES
     public Transform pauseCanvas;
     public Transform player;
     public Transform restartBox;
     public Transform quitBox;
     public Transform controlScreen;
+    //FIX: added ref to player
+    //public GameObject player;
 
+
+    //UPDATE
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +46,10 @@ public class PauseGame : MonoBehaviour
             }
         }
     }
+
+
+    //PAUSE
+    //Effects for opening menu
     public void Pause()
     {
         if (pauseCanvas.gameObject.activeInHierarchy == false)
@@ -49,6 +65,9 @@ public class PauseGame : MonoBehaviour
             player.GetComponent<PlayerAttack>().enabled = true;
         }
     }
+
+
+    //CALLCONTROLS
     public void CallControls()
     {
         if (controlScreen.gameObject.activeInHierarchy == false)
@@ -60,6 +79,9 @@ public class PauseGame : MonoBehaviour
             controlScreen.gameObject.SetActive(false);
         }
     }
+
+
+    //CALLRESTART
     public void CallRestart()
     {
         if (restartBox.gameObject.activeInHierarchy == false)
@@ -71,11 +93,17 @@ public class PauseGame : MonoBehaviour
             restartBox.gameObject.SetActive(false);
         }
     }
+
+
+    //RESTARTGAME
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
         Time.timeScale = 1;
     }
+
+
+    //CALLQUIT
     public void CallQuit()
     {
         if (quitBox.gameObject.activeInHierarchy == false)
@@ -87,8 +115,12 @@ public class PauseGame : MonoBehaviour
             quitBox.gameObject.SetActive(false);
         }
     }
+
+
+    //QUITTOMENU
     public void QuitToMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 }
+

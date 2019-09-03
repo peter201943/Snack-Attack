@@ -20,6 +20,9 @@ public class CameraController : MonoBehaviour
         public GameObject StartPosition;                    //The first position for the camera - Must be set in editor
         GameObject CameraPosition;                          //The Current Position
         GameObject NextPosition;                            //The Position to cut to
+    //Feel
+        public float zoom = 30f;
+        public float height = 20f;
 
 
     //AWAKE
@@ -38,7 +41,7 @@ public class CameraController : MonoBehaviour
     {
         //Scan for triggers
         //CheckTriggers();
-        transform.position = new Vector3(Player.transform.position.x, 30, Player.transform.position.z - 20);   //change 10 with desired distance from player
+        transform.position = new Vector3(Player.transform.position.x, zoom, Player.transform.position.z - height);   //change 10 with desired distance from player
     }
 
 

@@ -18,6 +18,10 @@ public class MonsterMovement : MonoBehaviour
     Transform Player;
     //What the monster is
     NavMeshAgent Monster;
+    //When the monster can move
+    public float SpawnTime = 2f;
+    //Monster move timer
+    private float SpawnTimer = 0f;
 
 
     //AWAKE
@@ -35,6 +39,15 @@ public class MonsterMovement : MonoBehaviour
     //Tells the Monster where Player is
     void Update()
     {
-        Monster.SetDestination(Player.position);
+        //Can Move
+        if (SpawnTimer >= SpawnTime)
+        { 
+            Monster.SetDestination(Player.position);
+        }
+        //Cannot Move
+        else
+        {
+            SpawnTimer += Time.deltaTime;
+        }
     }
 }
