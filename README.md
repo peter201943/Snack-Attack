@@ -67,6 +67,12 @@ How many features were implemented?
 
 What lessons were learned?
 
+## Media
+![image](https://drive.google.com/uc?export=view&id=1owSO4z36iP-i7DKIbKqkSqKRN_G5n_CT)
+![image](https://drive.google.com/uc?export=view&id=1yp4k1OYWwCLNu7r2xdRoAsB55BfS0sHa)
+![image](https://drive.google.com/uc?export=view&id=1O_BcE7rrNijtJ0o2oUK31sPSh6HkOr3X)
+![image](https://drive.google.com/uc?export=view&id=1Kb9WTWU62a7GUCaR1k0aj0W6wq1WIbDi)
+
 
 ------------------------------------------------------------------------------------------------
 
